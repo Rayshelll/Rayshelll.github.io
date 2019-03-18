@@ -1,16 +1,9 @@
-extends partial/layout
-
-block site_title
-    != page.category + " · " + config.title
-
-block description
-    - var desc = '分类：' + page.category + ' - ' + config.title;
-    meta(name="description", content=desc)
+extends includes/layout.pug
 
 block content
-  .autopagerize_page_element: .content
-    .archive.animated.fadeInDown
-      ul.list-with-title
-        include mixins
-        +postList()
-        +make_pager(__('prev'), __('next'))
+  include ./includes/mixins/article-sort.pug
+  #category
+    .article-sort-title= 'Category' + ' - ' + page.category
+    +articleSort(page.posts)
+  include includes/partial/page-nav.pug
+

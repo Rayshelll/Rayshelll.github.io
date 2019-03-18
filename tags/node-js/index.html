@@ -1,16 +1,9 @@
-extends partial/layout
-
-block site_title
-  != page.tag + " · " + config.title
-
-block description
-  - var desc = '标签：' + page.tag + ' - ' + config.title;
-  meta(name="description", content=desc)
+extends includes/layout.pug
 
 block content
-  .autopagerize_page_element: .content
-    .archive.animated.fadeInDown
-      ul.list-with-title
-        include mixins
-        +postList()
-        +make_pager(__('prev'), __('next'))
+  include ./includes/mixins/article-sort.pug
+  #tag
+    .article-sort-title= 'Tag' + ' - ' + page.tag
+    +articleSort(page.posts)
+  include includes/partial/page-nav.pug
+

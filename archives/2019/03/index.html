@@ -1,16 +1,10 @@
-extends partial/layout
 
-block site_title
-    !=  "归档 · " + config.title
-
-block description
-    - var desc = '归档页面 - ' + config.title;
-    meta(name="description", content=desc)
+extends includes/layout.pug
 
 block content
-    .autopagerize_page_element: .content
-      .archive.animated.fadeInDown
-        ul.list-with-title
-          include mixins
-          +postList()
-          +make_pager(__('prev'), __('next'))
+  include ./includes/mixins/article-sort.pug
+  #archive
+    .article-sort-title= 'Articles' + ' - ' + site.posts.length
+    +articleSort(page.posts)
+  include includes/partial/page-nav.pug
+
