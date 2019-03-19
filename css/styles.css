@@ -382,7 +382,7 @@
 
 .highlight pre {
   margin: 0;
-  background-color: #eeeeee;
+  background-color: #3e3e3e;
 }
 
 .highlight .comment,
@@ -507,14 +507,18 @@ h6, .h6 {
 }
 
 p {
-  margin: 0 0 15px;
+  margin: 0 0 10px;
+  font-family: "微软雅黑";
 }
 
 code {
-  background-color: #eeeeee;
+  background-color: #3e3e3e;
   font-size: 80%;
 }
 
+pre{
+  color: #eeeeee;
+}
 .fa { margin-right: 0.25em; }
 
 /* Buttons */
