@@ -8,19 +8,19 @@
   
     <meta name="keywords" content="Rayshell,Rayshell's Blog">
   
-  <meta name="description" content="今天是学习Vue.js的第一天，在老师的讲解下，感觉Vue.js是真的很有用，为前端程序员简化了太多工作了，真的是爱上了！ MVC和MVVM的区别">
+  <meta name="description" content="今天是学习Vue.js的第一天，在老师的讲解下，感觉Vue.js是真的很有用，为前端程序员简化了太多工作了，真的是爱上了！ MVC和MVVM的区别 ###Vue.js的基本语言1234567891011121314151617181920212223242526272829&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;    &amp;l">
 <meta name="keywords" content="Vue.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="learnVue_1">
 <meta property="og:url" content="http://www.rayshell.work/2019/03/22/learnVue-1/index.html">
 <meta property="og:site_name" content="Rayshell&#39;s blog">
-<meta property="og:description" content="今天是学习Vue.js的第一天，在老师的讲解下，感觉Vue.js是真的很有用，为前端程序员简化了太多工作了，真的是爱上了！ MVC和MVVM的区别">
+<meta property="og:description" content="今天是学习Vue.js的第一天，在老师的讲解下，感觉Vue.js是真的很有用，为前端程序员简化了太多工作了，真的是爱上了！ MVC和MVVM的区别 ###Vue.js的基本语言1234567891011121314151617181920212223242526272829&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;    &amp;l">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.rayshell.work/images/MVC.png">
-<meta property="og:updated_time" content="2019-03-22T01:42:42.271Z">
+<meta property="og:updated_time" content="2019-03-22T01:43:46.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="learnVue_1">
-<meta name="twitter:description" content="今天是学习Vue.js的第一天，在老师的讲解下，感觉Vue.js是真的很有用，为前端程序员简化了太多工作了，真的是爱上了！ MVC和MVVM的区别">
+<meta name="twitter:description" content="今天是学习Vue.js的第一天，在老师的讲解下，感觉Vue.js是真的很有用，为前端程序员简化了太多工作了，真的是爱上了！ MVC和MVVM的区别 ###Vue.js的基本语言1234567891011121314151617181920212223242526272829&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;    &amp;l">
 <meta name="twitter:image" content="http://www.rayshell.work/images/MVC.png">
   
   
@@ -144,10 +144,11 @@
             
             <p>　　今天是学习Vue.js的第一天，在老师的讲解下，感觉Vue.js是真的很有用，为前端程序员简化了太多工作了，真的是爱上了！</p>
 <h3 id="MVC和MVVM的区别"><a href="#MVC和MVVM的区别" class="headerlink" title="MVC和MVVM的区别"></a>MVC和MVVM的区别</h3><p><img src="/images/MVC.png" alt="MVC与MVVM"></p>
+<p>###Vue.js的基本语言<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;vue基本语法&lt;/title&gt;</span><br><span class="line">    &lt;!--1、引用Vue框架--&gt;</span><br><span class="line">    &lt;script src=<span class="string">"https://unpkg.com/vue/dist/vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;!--不要给body加id=<span class="string">"app"</span>--&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;!--将来new的Vue实例，会控制这个元素中的所有内容--&gt;</span><br><span class="line">&lt;!--Vue实例所控制的这个元素区域，就是我们的V--&gt;</span><br><span class="line">    &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">        &lt;p&gt;&#123;&#123; msg &#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        // 2、创建一个Vue实例</span><br><span class="line">        // 当我们导入包之后，在浏览器的内存中，就多了一个Vue构造函数</span><br><span class="line">        // 注意：我们new出来的这个vm对象，就是我们MVVM中的VM调度者</span><br><span class="line">        var vm = new Vue(&#123;</span><br><span class="line">            el: <span class="string">'#app'</span>,//表示，当前这个new的这个实例额，就是我们要操作的区域</span><br><span class="line">            //这里的data就是MVVM中的M，专门用来保存每个页面的数据</span><br><span class="line">            data: &#123;</span><br><span class="line">                msg: <span class="string">'Hello Vue.js!'</span>//通过Vue提供的指令，很方便的就能把数据渲染到页面上，程序员不在手动操作DOM元素了</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年03月22日 09:42</p>
+        <p>最后更新： 2019年03月22日 09:43</p>
         <p>原始链接： <a class="post-url" href="/2019/03/22/learnVue-1/" title="learnVue_1">http://www.rayshell.work/2019/03/22/learnVue-1/</a></p>
         <footer>
             <a href="http://www.rayshell.work">
